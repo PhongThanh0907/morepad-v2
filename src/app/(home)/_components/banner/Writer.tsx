@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 
 const Writer = () => {
   return (
-    <div className="flex gap-3 text-4xl leading-[50px] font-semibold">
+    <div className="flex gap-3 text-[72px] leading-[130%]">
       <Typewriter
         options={{
           loop: true,

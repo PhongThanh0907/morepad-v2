@@ -14,8 +14,8 @@ const Index = () => {
       }}
     >
       <div className="relative width-screen h-full">
-        <div className="absolute top-2/3 left-0 w-1/2">
-          <div className="h-28">
+        <div className="absolute top-[53%] left-0 w-2/3">
+          <div className="h-56">
             <Writer />
           </div>
           <Button>START BUILDING</Button>

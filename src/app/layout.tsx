@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Space_Mono } from "next/font/google";
 
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+// const spaceMono = Space_Mono({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+//   style: ["normal", "italic"],
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceMono.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
