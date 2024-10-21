@@ -37,16 +37,20 @@ const Index = () => {
     ["-20%", "12%"]
   );
 
-  const xBackground = useTransform(
+  const leftBackground = useTransform(
     scrollYProgress,
     [0.5, 0.8],
-    ["95%", "83.5%"]
+    ["100%", "100%"]
   );
-  //   const widthBackground = useTransform(
-  //     scrollYProgress,
-  //     [0.5, 1],
-  //     ["100vw", "100vw"]
-  //   );
+
+  const widthBackground = useTransform(
+    scrollYProgress,
+    [0.5, 0.8],
+    ["0", "100vw"]
+  );
+
+  const opacityText = useTransform(scrollYProgress, [0.8, 0.9], [0, 1]);
+  const topText = useTransform(scrollYProgress, [0.6, 0.9], ["60%", "20%"]);
 
   return (
     <div className="mt-28">
@@ -61,11 +65,8 @@ const Index = () => {
         </p>
       </div>
 
-      <div
-        className="h-[400vh] relative hidden lg:block width-screen"
-        ref={targetRef}
-      >
-        <div className="h-screen sticky top-0">
+      <div className="h-[400vh] relative hidden lg:block" ref={targetRef}>
+        <div className="h-screen sticky top-0 overflow-hidden">
           <motion.div
             className="h-screen"
             style={{
@@ -124,11 +125,35 @@ const Index = () => {
 
             <motion.div
               style={{
-                //   opacity: opacityItem1,
-                x: xBackground,
+                left: leftBackground,
+                background:
+                  "radial-gradient(93.76% 93.76% at 62.26% 16.98%, #E6E5E9 66.38%, #A65AF2 100%)",
+                width: widthBackground,
               }}
-              className="bg-red-400 h-screen"
-            ></motion.div>
+              className="absolute h-screen w-screen"
+            >
+              <div className="h-full w-full grid grid-cols-3 relative">
+                <motion.div
+                  style={{
+                    opacity: opacityText,
+                    top: topText,
+                  }}
+                  className="absolute space-y-5 left-20"
+                >
+                  <span className="text-[var(--purple)] uppercase text-[32px]">
+                    Develop with morepad
+                  </span>
+                  <p className="text-[#08010F] text-[42px] leading-[130%] w-[60%]">
+                    MOREPad provides the necessary tools for easy building,
+                    adjusting, and integrating of projects with Omnichain
+                    Standard functions across 50+ blockchains/ecosystems.
+                  </p>
+                </motion.div>
+                <div className="border-l border-r border-dashed border-[var(--purple)]" />
+                <div className="border-r border-dashed border-[var(--purple)]" />
+                <div className="border-r border-dashed border-[var(--purple)]" />
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
