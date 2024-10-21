@@ -37,11 +37,11 @@ const Index = () => {
     [0.5, 0.8],
     ["95%", "83.5%"]
   );
-  const widthBackground = useTransform(
-    scrollYProgress,
-    [0.5, 1],
-    ["100vw", "100vw"]
-  );
+  //   const widthBackground = useTransform(
+  //     scrollYProgress,
+  //     [0.5, 1],
+  //     ["100vw", "100vw"]
+  //   );
 
   return (
     <div className="mt-28">
