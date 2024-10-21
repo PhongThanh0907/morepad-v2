@@ -28,9 +28,14 @@ const Index = () => {
 
   const yItem1 = useTransform(scrollYProgress, [0.1, 0.45], ["0%", "-250%"]);
   const opacityItem1 = useTransform(scrollYProgress, [0.1, 0.4], [0, 1]);
+  const bottomItem1 = useTransform(scrollYProgress, [0.1, 0.45], ["0%", "62%"]);
 
-  const yItem2 = useTransform(scrollYProgress, [0.2, 0.45], ["150%", "-70%"]);
   const opacityItem2 = useTransform(scrollYProgress, [0.25, 0.5], [0, 1]);
+  const bottomItem2 = useTransform(
+    scrollYProgress,
+    [0.3, 0.45],
+    ["-20%", "12%"]
+  );
 
   const xBackground = useTransform(
     scrollYProgress,
@@ -86,7 +91,7 @@ const Index = () => {
             <motion.div
               style={{
                 opacity: opacityItem1,
-                y: yItem1,
+                bottom: bottomItem1,
               }}
               className="w-[423px] space-y-4 absolute right-20 bottom-0"
             >
@@ -103,7 +108,7 @@ const Index = () => {
             <motion.div
               style={{
                 opacity: opacityItem2,
-                y: yItem2,
+                bottom: bottomItem2,
               }}
               className="w-[423px] space-y-4 absolute right-20 bottom-0"
             >
