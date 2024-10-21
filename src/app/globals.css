@@ -8,7 +8,8 @@
   --background: #000000;
   --purple: #af5eff;
   --white: #e7e6e8;
-  --gray: #fffc;
+  --gray: #ffffffb3;
+  --gradient-01: linear-gradient(90deg, #AF5EFF 0%, #08010F 100%);
 }
 
 body {

@@ -19,13 +19,6 @@ const Glow: React.FC<GlowProps> = ({ children, className, sizeLight }) => {
         }}
         className="light animate-moveLight"
       ></div>
-      {/* <div
-        style={{
-          height: sizeLight,
-          width: sizeLight,
-        }}
-        className="light-2 animate-moveLight2"
-      ></div> */}
       <div
         style={{
           height: sizeLight,
