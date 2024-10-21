@@ -26,7 +26,6 @@ const Index = () => {
     ]
   );
 
-  const yItem1 = useTransform(scrollYProgress, [0.1, 0.45], ["0%", "-250%"]);
   const opacityItem1 = useTransform(scrollYProgress, [0.1, 0.4], [0, 1]);
   const bottomItem1 = useTransform(scrollYProgress, [0.1, 0.45], ["0%", "62%"]);
 
