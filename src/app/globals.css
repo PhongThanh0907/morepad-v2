@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 :root {
   --background: #000000;
-  --purple: #AF5EFF;
+  --purple: #af5eff;
   --white: #e7e6e8;
+  --gray: #fffc;
 }
 
 body {
@@ -48,17 +51,44 @@ body {
   font-family: "Aeonik", sans-serif;
 }
 
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @layer utilities {
   .width-screen {
-    @apply max-w-7xl mx-auto
+    @apply max-w-7xl mx-auto;
   }
   .flex-center-row {
-    @apply flex justify-center items-center
+    @apply flex justify-center items-center;
   }
   .flex-center-col {
-    @apply flex flex-col justify-center items-center
+    @apply flex flex-col justify-center items-center;
   }
   .flex-between {
-    @apply flex justify-between items-center
+    @apply flex justify-between items-center;
   }
+}
+
+.light,
+.light-2,
+.light-3 {
+  width: 200px;
+  height: 200px;
+  filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.809);
+  border-radius: 50%;
+  position: absolute;
+  transition: all 2s;
+}
+
+.glow-animation:hover .light,
+.glow-animation:hover .light-2,
+.glow-animation:hover .light-3 {
+  animation-play-state: paused;
+  width: 100%;
+  height: 100%;
+  transform: scale(4);
 }
