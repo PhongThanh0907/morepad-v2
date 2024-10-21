@@ -3,6 +3,7 @@ import Banner from "./_components/banner";
 import Chains from "./_components/chains";
 import ViewCode from "./_components/viewcode";
 import Omnịchain from "./_components/omnichain";
+import Develop from "./_components/develop";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Chains />
       <ViewCode />
       <Omnịchain />
+      <Develop />
       <div className="h-screen w-screen" />
     </SmoothScroll>
   );

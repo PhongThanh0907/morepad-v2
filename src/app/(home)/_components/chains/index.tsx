@@ -15,56 +15,56 @@ const Index = () => {
     "/chains/Taiko.png",
   ];
   return (
-    <div className="relative mb-10 mt-24">
-      <p className="opacity-50 text-base text-center absolute inset-x-0 -top-12">
-        SUPPORTED CHAINS
-      </p>
-      <div className="animate-horizontal-scroll flex items-center w-max">
-        {chains.map((chain, index) => (
-          <div
-            style={{
-              border: "1px dashed rgba(255, 255, 255, 0.12)",
-            }}
-            className="h-[190px] w-[190px] flex-center-row mx-2"
-            key={index}
-          >
-            {index === 0 ? (
-              <ETH />
-            ) : (
-              <Image
-                src={chain}
-                alt="chain"
-                height={44}
-                width={156}
-                className="object-cover"
-              />
-            )}
-          </div>
-        ))}
-      </div>
+    <div className="pt-20">
+      <p className="opacity-50 text-base text-center pb-10">SUPPORTED CHAINS</p>
+      <div className="relative overflow-hidden w-screen">
+        <div className="animate-horizontal-scroll flex items-center w-max overflow-hidden">
+          {chains.map((chain, index) => (
+            <div
+              style={{
+                border: "1px dashed rgba(255, 255, 255, 0.12)",
+              }}
+              className="h-[190px] w-[190px] flex-center-row mx-2"
+              key={index}
+            >
+              {index === 0 ? (
+                <ETH />
+              ) : (
+                <Image
+                  src={chain}
+                  alt="chain"
+                  height={44}
+                  width={156}
+                  className="object-cover"
+                />
+              )}
+            </div>
+          ))}
+        </div>
 
-      <div className="absolute top-0 left-0 bg-white/0 animate-horizontal-scroll-2 flex items-center w-max">
-        {chains.map((chain, index) => (
-          <div
-            style={{
-              border: "1px dashed rgba(255, 255, 255, 0.12)",
-            }}
-            className="h-[190px] w-[190px] flex-center-row mx-2"
-            key={index}
-          >
-            {index === 0 ? (
-              <ETH />
-            ) : (
-              <Image
-                src={chain}
-                alt="chain"
-                height={44}
-                width={156}
-                className="object-cover"
-              />
-            )}
-          </div>
-        ))}
+        <div className="absolute top-0 left-0 bg-white/0 animate-horizontal-scroll-2 flex items-center w-max">
+          {chains.map((chain, index) => (
+            <div
+              style={{
+                border: "1px dashed rgba(255, 255, 255, 0.12)",
+              }}
+              className="h-[190px] w-[190px] flex-center-row mx-2"
+              key={index}
+            >
+              {index === 0 ? (
+                <ETH />
+              ) : (
+                <Image
+                  src={chain}
+                  alt="chain"
+                  height={44}
+                  width={156}
+                  className="object-cover"
+                />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
